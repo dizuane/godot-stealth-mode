@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=3 uid="uid://bm6fnjin247qe"]
+
+[ext_resource type="Texture2D" uid="uid://pgjtx6n6gp8l" path="res://assets/spritesheets/grass.png" id="1_yusx7"]
+[ext_resource type="Texture2D" uid="uid://yi6rgtndki22" path="res://assets/spritesheets/concrete.png" id="2_c3urn"]
+[ext_resource type="Texture2D" uid="uid://dm2760rmn6fv7" path="res://assets/spritesheets/floor.png" id="3_4bmmk"]
+[ext_resource type="Texture2D" uid="uid://dmqn4v4byx0gg" path="res://assets/spritesheets/walls.png" id="4_emi43"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t40qv"]
+texture = ExtResource("1_yusx7")
+margins = Vector2i(2, 2)
+separation = Vector2i(4, 0)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vyvpq"]
+texture = ExtResource("2_c3urn")
+margins = Vector2i(2, 2)
+separation = Vector2i(4, 0)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_72jbv"]
+texture = ExtResource("3_4bmmk")
+margins = Vector2i(2, 2)
+separation = Vector2i(4, 4)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uw82s"]
+texture = ExtResource("4_emi43")
+margins = Vector2i(2, 2)
+separation = Vector2i(4, 4)
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ue7gd"]
+tile_size = Vector2i(64, 64)
+sources/0 = SubResource("TileSetAtlasSource_t40qv")
+sources/1 = SubResource("TileSetAtlasSource_vyvpq")
+sources/2 = SubResource("TileSetAtlasSource_72jbv")
+sources/3 = SubResource("TileSetAtlasSource_uw82s")
+
+[node name="LevelMap" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ue7gd")
+format = 2
